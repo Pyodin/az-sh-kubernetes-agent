@@ -152,7 +152,7 @@ Let's test if the agent is working correctly by running a simple pipeline in Azu
     trigger:
       - master
 
-    pool: agent-pool-tanzu
+    pool: agent-pool
 
     steps:
     - script: echo Hello, world!
@@ -231,7 +231,7 @@ A ScaledObject resource is used to define the scaling behavior for a deployment 
     - You might be restricted with the max number of agents you can run due to your Azure DevOps subscription. 
     - Pour récupérer le *poolId*, vous pouvez utiliser la commande suivante:
       ```bash
-      az pipelines pool list --organization https://dev.azure.com/<your-organization> --pool-name agent-pool-tanzu |grep id 
+      az pipelines pool list --organization https://dev.azure.com/<your-organization> --pool-name <your-agent-pool> | grep id 
       ```
 - Apply the ScaledObject YAML file:
     ```bash
