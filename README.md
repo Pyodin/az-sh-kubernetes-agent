@@ -5,6 +5,12 @@ This project will cover the following steps:
 - Create a deployment for the agent in Kubernetes
 - Scale the agent deployment using [KEDA](https://keda.sh/), a Kubernetes-based event-driven autoscaler
 
+## Plan 
+- [x] Create a Docker image for the agent
+- [x] Create a deployment for the agent in Kubernetes
+- [x] Configure Azure DevOps to use the agent on Kubernetes
+- [x] Scale the agent deployment using KEDA
+
 ## Prerequisites
 - Azure DevOps organization
 - Azure DevOps project
@@ -295,3 +301,7 @@ Let's create a new job in Azure DevOps that will trigger the scaling of the agen
           script: 'sleep 5m'
         displayName: Wait for 5 minutes
     ```
+
+- Click on “**Save and run**” to save the pipeline and trigger a new build.
+
+If you want to create a user for your agent, you can check under [here](/ci-user/Readme.md)
